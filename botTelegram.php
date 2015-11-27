@@ -1,6 +1,7 @@
 <?php
 include 'apikey.php';
-$apiToken=KEY;
+//$apiToken=KEY;
+$apiToken="161840832:AAHtUejWAGwyxRdQmdT3KvTf58ATApyVamY";
 $website="https://api.telegram.org/bot".$apiToken;
 
 $update=file_get_contents($website."/getupdates");
