@@ -4,7 +4,8 @@ include 'apikey.php';
 $apiToken="161840832:AAHtUejWAGwyxRdQmdT3KvTf58ATApyVamY";
 $website="https://api.telegram.org/bot".$apiToken;
 
-$update=file_get_contents($website."/getupdates");
+//$update=file_get_contents($website."/getupdates");
+$update=file_get_contents("php://input");
 $updateArray=json_decode($update,true);
 //var_dump($updateArray);
 //print_r($update);
