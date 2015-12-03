@@ -7,8 +7,8 @@ $update=file_get_contents("php://input");
 //$update=file_get_contents("php://input");
 $updateArray=json_decode($update,true);
 //var_dump($updateArray);
-print_r($update);
-
+//print_r($update);
+/*
 $cont=count($updateArray['result'])-1;
 if(count($updateArray['result'])>0){
 	$name=$updateArray['result'][$cont]['message']['from']['first_name'];
@@ -18,7 +18,14 @@ if(count($updateArray['result'])>0){
 	$chatId=$updateArray["result"][$cont]['message']['chat']['id'];
 
 	$text=$updateArray["result"][$cont]['message']['text'];
-}
+}*/
+$name=$updateArray['result'][0]['message']['from']['first_name'];
+if(isset($updateArray['result'][0]['message']['from']['last_name'])){
+		$name.=" ".$updateArray['result'][0]['message']['from']['last_name'];
+		$chatId=$updateArray["result"][0]['message']['chat']['id'];
+
+	$text=$updateArray["result"][0]['message']['text'];
+	}
 
 if($text==="/kaixo"){
 	$mensaje="Kaixo, soy un bot creado por Ierai";
