@@ -19,12 +19,12 @@ if(count($updateArray['result'])>0){
 
 	$text=$updateArray["result"][$cont]['message']['text'];
 }*/
-$name=$updateArray['result'][0]['message']['from']['first_name'];
-if(isset($updateArray['result'][0]['message']['from']['last_name'])){
-		$name.=" ".$updateArray['result'][0]['message']['from']['last_name'];
-		$chatId=$updateArray["result"][0]['message']['chat']['id'];
+$name=$updateArray['message']['from']['first_name'];
+if(isset($updateArray['message']['from']['last_name'])){
+		$name.=" ".$updateArray['message']['from']['last_name'];
+		$chatId=$updateArray['message']['chat']['id'];
 
-	$text=$updateArray["result"][0]['message']['text'];
+	$text=$updateArray['message']['text'];
 	}
 
 if($text==="/kaixo"){
