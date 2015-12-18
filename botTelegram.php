@@ -9,8 +9,8 @@ $emojis=array(
 	array("nombre"=>"gafas","codigo"=>'\ud83d\ude0e')
 	);
 
-//$update=file_get_contents("php://input");
-$update=file_get_contents($website."/getupdates");
+$update=file_get_contents("php://input");
+//$update=file_get_contents($website."/getupdates");
 $updateArray=json_decode($update,true);
 //var_dump($updateArray);
 //print_r($update);
